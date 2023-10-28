@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pelayanan Kesehatan</title>
+  <!-- bagian cdn css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-LhwIoA3jqAG5SNg5osnep6jZveJ3utVQ5St1ea3ByLE21z7hHjz4JsOp+5G5an5C" crossorigin="anonymous"> -->
+</head>
+<style>
+  html {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+  }
+
+  .dokter-info {
+    /* display: flex; */
+    align-items: center;
+    /* Untuk membuat gambar dan teks vertikal sejajar */
+    margin-bottom: 150px;
+    /* Jarak antara setiap item dokter */
+  }
+
+  .navbar {
+    background-image: linear-gradient(to right, #fafafa, #198754);
+    padding: 20px;
+  }
+
+  footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    /* Ganti dengan warna latar belakang yang Anda inginkan */
+    color: #fff;
+    /* Ganti dengan warna teks yang Anda inginkan */
+    padding: 20px 0;
+    /* Atur padding atas dan bawah sesuai kebutuhan */
+  }
+
+  #layananjanjitemu {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  #dokter {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  #artikel {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    /* background-color: red; */
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+
+  .footer {
+    text-align: center;
+    background-color: #28a745;
+    padding: 20px;
+  }
+
+  .footer p {
+    color: #fff;
+  }
+  .footer img {
+    background-color: transparent;
+    margin-right: 10px;
+  }
+</style>
+
+<body>
+  <!-- start bagian navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary navbar fixed-top" id="navbar">
+    <div class="container">
+      <a class="navbar-brand"
+        href="file:///home/achmadfadli/Documents/folder%20html-css-javascript/index.html"><b>Kil</b><b
+          class="text-success">as</b></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#layananjanjitemu">Layanan Janji Temu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#dokter">Dokter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#artikel">Artikel</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#saran">Saran</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- end bagian navbar -->
+
+  <!-- layananjanjitemu to footer(start) -->
+  <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true"
+    class="scrollspy-example rounded-2" tabindex="0">
+    <!-- start bagian jumbotron -->
+    <section class="home animate__animated animate__fadeInLeft" id="home">
+      <div class="pt-5 bg-light">
+        <div class="container pt-4">
+          <div class="kalimat pt-4 mt-4">
+            <h1 class="text-capitalize">Selamat Datang Di Website Klinik Tiga Belas</h1>
+            <p class="lead text-capitalize">Website ini berisikan Pengenalan Singkat seputar Klinik dan artikel2 tentang
+              kesehatan dan Janji Temu Pasien Secara Online</p>
+            <!-- <p><a href="#layananjanjitemu" class="btn btn-success">Cari Seputar Tiga Belas</a></p> -->
+            <p><button class="btn btn-success" onclick="
+            //alert('tes')
+            window.scrollBy(0, 687);
+            ">Cari Seputar Tiga Belas</button></p>
+          </div>
+        </div>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+              <path
+                fill="#ffffff"
+                fill-opacity="10"
+                d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,80C672,64,768,64,864,96C960,128,1056,192,1152,186.7C1248,181,1344,107,1392,69.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+              ></path>
+            </svg> -->
+        <!-- M0,96L8,133.3C16,171,32,245,48,245.3C64,245,80,171,96,133.3C112,96,128,96,144,133.3C160,171,176,245,192,266.7C208,288,224,256,240,245.3C256,235,272,245,288,218.7C304,192,320,128,336,96C352,64,368,64,384,85.3C400,107,416,149,432,149.3C448,149,464,107,480,106.7C496,107,512,149,528,186.7C544,224,560,256,576,250.7C592,245,608,203,624,197.3C640,192,656,224,672,213.3C688,203,704,149,720,144C736,139,752,181,768,186.7C784,192,800,160,816,122.7C832,85,848,43,864,53.3C880,64,896,128,912,138.7C928,149,944,107,960,128C976,149,992,235,1008,229.3C1024,224,1040,128,1056,96C1072,64,1088,96,1104,122.7C1120,149,1136,171,1152,176C1168,181,1184,171,1200,181.3C1216,192,1232,224,1248,208C1264,192,1280,128,1296,133.3C1312,139,1328,213,1344,224C1360,235,1376,181,1392,138.7C1408,96,1424,64,1432,48L1440,32L1440,320L1432,320C1424,320,1408,320,1392,320C1376,320,1360,320,1344,320C1328,320,1312,320,1296,320C1280,320,1264,320,1248,320C1232,320,1216,320,1200,320C1184,320,1168,320,1152,320C1136,320,1120,320,1104,320C1088,320,1072,320,1056,320C1040,320,1024,320,1008,320C992,320,976,320,960,320C944,320,928,320,912,320C896,320,880,320,864,320C848,320,832,320,816,320C800,320,784,320,768,320C752,320,736,320,720,320C704,320,688,320,672,320C656,320,640,320,624,320C608,320,592,320,576,320C560,320,544,320,528,320C512,320,496,320,480,320C464,320,448,320,432,320C416,320,400,320,384,320C368,320,352,320,336,320C320,320,304,320,288,320C272,320,256,320,240,320C224,320,208,320,192,320C176,320,160,320,144,320C128,320,112,320,96,320C80,320,64,320,48,320C32,320,16,320,8,320L0,320Z -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#198754" fill-opacity="1"
+            d="M0,192L12,197.3C24,203,48,213,72,192C96,171,120,117,144,96C168,75,192,85,216,101.3C240,117,264,139,288,170.7C312,203,336,245,360,234.7C384,224,408,160,432,144C456,128,480,160,504,176C528,192,552,192,576,202.7C600,213,624,235,648,234.7C672,235,696,213,720,202.7C744,192,768,192,792,197.3C816,203,840,213,864,213.3C888,213,912,203,936,176C960,149,984,107,1008,106.7C1032,107,1056,149,1080,170.7C1104,192,1128,192,1152,160C1176,128,1200,64,1224,74.7C1248,85,1272,171,1296,224C1320,277,1344,299,1368,272C1392,245,1416,171,1428,133.3L1440,96L1440,320L1428,320C1416,320,1392,320,1368,320C1344,320,1320,320,1296,320C1272,320,1248,320,1224,320C1200,320,1176,320,1152,320C1128,320,1104,320,1080,320C1056,320,1032,320,1008,320C984,320,960,320,936,320C912,320,888,320,864,320C840,320,816,320,792,320C768,320,744,320,720,320C696,320,672,320,648,320C624,320,600,320,576,320C552,320,528,320,504,320C480,320,456,320,432,320C408,320,384,320,360,320C336,320,312,320,288,320C264,320,240,320,216,320C192,320,168,320,144,320C120,320,96,320,72,320C48,320,24,320,12,320L0,320Z">
+          </path>
+        </svg>
+      </div>
+    </section>
+    <button onclick="topFunction()" id="myBtn" title="Go to top" class="btn btn-success">&uparrow;</button>
+    <!-- end bagian jumbotron -->
+    <!-- bagian layananjanjitemu start -->
+    <section id="layananjanjitemu" class="animate__animated animate__fadeInLeft">
+      <h2 class="txtlayananjanjitemu text-capitalize text-center" id="txtlayananjanjitemu">layanan janji temu</h2>
+      <p class="text-center text-capitalize">Anda Bisa Melakukan Janji Temu Melalui Formulir dibawah ini ataupun datang
+        ke kilas secara langsung</p>
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-sm-6 col-lg-6">
+            <h2 class="text-capitalize">Keterangan Waktu</h2>
+            <div class="card" style="width: 100%;">
+              <div class="card-header">
+                Time
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Waktu Layanan : 09.00 - 21.00 WIB</li>
+                <li class="list-group-item">Lokasi : Jalan Akses UI Kelapa 2 Depok</li>
+                <li class="list-group-item">Status/Keterangan : Buka</li>
+                <li class="list-group-item">Dokter Piket : Dr. Muhammad Ali</li>
+                <li class="list-group-item">Pasien Yang Melakukan Janji Temu <br>Menggunakan Website : 13 orang <br>
+                  Menggunakan Aplikasi : 5 orang</li>
+                <li class="list-group-item">Pasien Yang Selesai Berobat Hari ini : 18</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-6">
+            <h2 class="text-capitalize">Formulir Janji Temu</h2>
+            <form action="#" method="post" class="text-start">
+              <div class="input-group mb-3">
+                <span class="input-group-text">Nama</span>
+                <input type="text" class="form-control" id="nama" name="nama">
+                <span class="input-group-text">Email</span>
+                <input type="email" class="form-control" id="email" name="email">
+              </div>
+              <div class="input-group  mb-3">
+                <span class="input-group-text">Alamat</span>
+                <input type="text" class="form-control" id="alamat" name="alamat">
+                <span class="input-group-text">Umur</span>
+                <input type="number" min="1" class="form-control" id="umur" name="umur">
+              </div>
+              <div class="mb-3">
+                <label for="nama" class="form-label">Penyakit Dan Keluhan</label>
+                <textarea class="form-control" id="penyakitdankeluhan" name="penyakitdankeluhan" rows="3"></textarea>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="checklist" onclick="
+                  let checkbox = document.getElementById('checklist')
+                  let tombol = document.getElementById('buttonss')
+                  if (checkbox.checked == true){
+                      tombol.style.display = 'block'
+                  }else {
+                      tombol.style.display = 'none'
+                  }
+                  ">
+                <label class="form-check-label" for="checklist">Saya Membutuhkan Pelayanan Dan Pemeriksaan Secara
+                  langsung (langsung ke klinik tigabelas)</label>
+              </div>
+              <script>
+                function click() {
+                  let checkbox = document.getElementById("checklist")
+                  let tombol = document.getElementById("buttonss")
+                  if (checkbox.checked == true) {
+                    tombol.style.display = "block"
+                  } else {
+                    tombol.style.display = "none"
+                  }
+                }
+              </script>
+              <button type="submit" id="buttonss" style="display: none;" class="btn btn-primary w-100">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- bagian layananjanjitemu end -->
+
+    <!-- bagian dokter(start)-->
+    <section id="dokter" class="bg-body-tertiary text-center animate__animated animate__fadeInLeft">
+      <h2 class="txtdokter text-capitalize text-center mt-3 mb-3" id="txtdokter">Dokter</h2>
+      <p class="text-capitalize text-center">Dokter yang akan melayani anda / dokter yang tedaftar di kilas</p>
+      <div class="container">
+        <div class="row">
+          <div id="carouselExampleIndicators" class="carousel carousel-dark slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="dokter-info">
+                  <img src="asset/dokter1.png"
+                    style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;" alt="">
+                </div>
+                <!-- <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br> -->
+                <div class="carousel-caption d-block d-md-block text-dark"
+                  style="margin-bottom: 20;padding-bottom: 20px;">
+                  <h5 class="text-capitalize">Dr. Muhammad Ali</h5>
+                  <p class="text-capitalize">Tahun Bergabung : 2016 - Sekarang</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="dokter-info">
+                  <img src="asset/dokter2.png"
+                    style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;" alt="">
+                </div>
+                <!-- <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br> -->
+                <div class="carousel-caption d-block d-md-block text-dark">
+                  <h5 class="text-capitalize">Dr. Sarah Abdullah</h5>
+                  <p class="text-capitalize">Tahun Bergabung : 2017 - Sekarang</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="dokter-info">
+                  <img src="asset/dokter3.png"
+                    style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;" alt="">
+                </div>
+                <!-- <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br> -->
+                <div class="carousel-caption d-block d-md-block text-dark">
+                  <h5 class="text-capitalize">Dr.Abdullah Rahman</h5>
+                  <p class="text-capitalize">Tahun Bergabung : 2019 - Sekarang</p>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <!-- dokter atas -->
+            <!-- <div class="col-sm-6 col-lg-4">
+                <img src="asset/dokter1.png" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;" alt="">
+                <h3 class="text-capitalize">Dr. Muhammad Ali</h3>
+                <p class="text-capitalize">Tahun Bergabung : 2016 - Sekarang</p>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                <img src="asset/dokter2.png" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;" alt="">
+                <h3 class="text-capitalize">Dr. Sarah Abdullah</h3>
+                <p class="text-capitalize">Tahun Bergabung : 2017 - Sekarang</p>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                <img src="asset/dokter3.png" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%;" alt="">
+                <h3 class="text-capitalize">Dr.Abdullah Rahman</h3>
+                <p class="text-capitalize">Tahun Bergabung : 2019 - Sekarang</p>
+              </div>
+            </div>  
+          </div> -->
+    </section>
+    <!-- bagian dokter(end) -->
+
+    <!-- bagian artikel start -->
+    <section class="artikel animate__animated animate__fadeInLeft" id="artikel">
+      <div class="container">
+        <h2 class="text-capitalize text-center">Artikel</h2>
+        <p class="text-capitalize text-center">Artikel Yang berisikan informasi2 tentang kesehatan</p>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="cari informasi" aria-label="cari informasi">
+          <span class="input-group-text" id="basic-addon2">cari</span>
+        </div>
+        <div class="row d-flex justify-content-between">
+          <div class="col-sm-6 col-md-4 pt-3 pb-3">
+            <div class="card" style="width: 100%;">
+              <img src="asset/berita1.jpeg" class="card-img-top" alt="berita100">
+              <div class="card-body">
+                <h5 class="card-title">5 Cara Biar Biasa Berpikir Positif, Tenang di Bawah Tekanan</h5>
+                <p class="card-text">Berikut ini adalah cara untuk terus berfikir positif</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 pt-3 pb-3">
+            <div class="card" style="width: 100%;">
+              <img src="asset/berita2.jpg" class="card-img-top" alt="berita200">
+              <div class="card-body">
+                <h5 class="card-title">Kenali 7 Tanda Seseorang Perlu Segera Pergi ke Psikolog</h5>
+                <p class="card-text">Jangan kamu abaikan, ketahui kapan waktu yang tepat kamu harus berkunjung ke
+                  psikolog. Misalnya, ketika mengalami stres dan sedih</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 pt-3 pb-3">
+            <div class="card" style="width: 100%;">
+              <img src="asset/berita3.jpg" class="card-img-top" alt="berita300">
+              <div class="card-body">
+                <h5 class="card-title">Apa sih,pentingnya Menjaga Kesehatan</h5>
+                <p class="card-text">Allah sangat menyukai kebersihan,Allah berfirman dalam surat Al Baqarah ayat 222 yg
+                  artinya,Sesungguhnya Allah menyukai orang<sup>2</sup> yg bertaubat dan orang-orang yang mensucikan
+                  dirinya.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- bagian artikel end  -->
+
+    <!-- bagian saran start -->
+    <section class="saran bg-body-tertiary pt-5 pb-4 animate__animated animate__fadeInLeft" id="saran">
+      <div class="container">
+        <h2 class="text-capitalize text-center ">Saran</h2>
+        <p class="text-capitalize text-center">silahkan memberikan kesan/pesan ataupun saran untuk Website/Situs kami
+          agar lebih baik lagi Terima kasih &#129315;</p>
+        <form action="" method="post">
+          <div class="mb-3">
+            <label for="nama" class="form-label">Nama:</label>
+            <input type="text" class="form-control" id="nama" name="nama" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="alamat" class="form-label">Alamat:</label>
+            <input type="text" class="form-control" id="alamat" name="alamat" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="keterangan" class="form-label">Keterangan:</label>
+            <textarea class="form-control" id="keterangan" name="keterangan" rows="11"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-success mt-4 mb-4">Submit</button>
+        </form>
+      </div>
+    </section>
+    <!-- bagian saran end -->
+
+    <!-- footer start -->
+    <footer class="text-center text-dark bg-success footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Alamat Kami</h5>
+            <p>Jalan Akses UI Kelapa 2 No. 123</p>
+            <p>Kota Depok, Jawa Barat, Indonesia</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Jadwal Praktek</h5>
+            <p>Senin - Jumat: 08:00 - 17:00</p>
+            <p>Sabtu - Minggu: 08:00 - 20:00</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Dapatkan Aplikasi Kami</h5>
+            <img src="asset/googleplay.png" style="background-color: transparent;" width="35%;" alt="">
+            <img src="asset/app-store.jpg" style="background-color: transparent;" width="35%;" alt="">
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="text-center footer" style="background-image: linear-gradient(to right, #fafafa, #198754);">
+      <p>&copy; 2023 Kilas by Kelompok 1 Kelas 2IA13</p>
+    </div>
+
+
+
+    <!-- footer end -->
+  </div>
+  <!-- section js -->
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+  <!-- section js -->
+  <script src="script.js"></script>
+  <!-- bagian cdn js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
